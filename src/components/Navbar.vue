@@ -12,6 +12,7 @@
 import { ref, onMounted, watch, nextTick } from 'vue'
 import gsap from 'gsap'
 import { navLinks, profile } from '../data/portfolio.js'
+import ThemeSwitcher from './ThemeSwitcher.vue'
 
 const isOpen = ref(false)
 const navRef = ref(null)
@@ -74,12 +75,12 @@ onMounted(() => {
         </li>
       </ul>
 
-      <a
-        href="#footer"
-        class="hidden md:inline-flex btn-primary !py-2 !px-5 text-sm"
-      >
-        Let's Talk
-      </a>
+      <div class="hidden md:flex items-center gap-3">
+        <ThemeSwitcher />
+        <a href="#contact" class="btn-primary !py-2 !px-5 text-sm" v-magnetic>
+          Let's Talk
+        </a>
+      </div>
 
       <!-- Hamburger — mobile only -->
       <button
@@ -120,8 +121,11 @@ onMounted(() => {
             {{ link.label }}
           </a>
         </li>
+        <li class="mt-2">
+          <ThemeSwitcher />
+        </li>
         <li class="mt-4">
-          <a href="#footer" class="btn-primary" @click="closeDrawer">Let's Talk</a>
+          <a href="#contact" class="btn-primary" @click="closeDrawer">Let's Talk</a>
         </li>
       </ul>
     </div>

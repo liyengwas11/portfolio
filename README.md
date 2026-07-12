@@ -63,8 +63,3 @@ contain any image cleanly.
 - **Reduced motion**: both the composable and the Hero timeline check
   `prefers-reduced-motion` and skip animation (content is simply shown)
   when the user has that OS-level preference set.
-
-## Deploying
-
-The build output in `dist/` is static — deploy it to Vercel, Netlify,
-GitHub Pages, or any static host. No server-side code is involved.

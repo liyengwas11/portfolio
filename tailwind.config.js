@@ -7,26 +7,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Core brand palette — reference these instead of raw hex
-        // anywhere in the app so the theme stays centrally editable.
+        // Core brand palette — backed by CSS custom properties (set at
+        // runtime by src/composables/useTheme.js) rather than static hex,
+        // so dark/light mode and user-picked accent colors both flow
+        // through automatically. The rgb(var(...) / <alpha-value>) pattern
+        // is what lets opacity utilities like `bg-accent/10` keep working.
         midnight: {
-          DEFAULT: '#0f172a', // page background
-          light: '#152238'
+          DEFAULT: 'rgb(var(--color-bg) / <alpha-value>)',
+          light: 'rgb(var(--color-bg-light) / <alpha-value>)'
         },
         steel: {
-          DEFAULT: '#1e293b', // card surfaces
-          light: '#27374d',
-          dark: '#172234'
+          DEFAULT: 'rgb(var(--color-surface) / <alpha-value>)',
+          light: 'rgb(var(--color-surface-light) / <alpha-value>)',
+          dark: 'rgb(var(--color-surface-dark) / <alpha-value>)'
         },
         accent: {
-          DEFAULT: '#06b6d4', // electric cyan / neon teal — CTAs, hovers
-          soft: '#22d3ee',
-          dim: 'rgba(6, 182, 212, 0.15)'
+          DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+          soft: 'rgb(var(--color-accent-soft) / <alpha-value>)'
         },
         ink: {
-          DEFAULT: '#f1f5f9', // crisp slate white — primary text
-          muted: '#94a3b8',   // secondary text
-          faint: '#64748b'    // tertiary / captions
+          DEFAULT: 'rgb(var(--color-text) / <alpha-value>)',
+          muted: 'rgb(var(--color-text-muted) / <alpha-value>)',
+          faint: 'rgb(var(--color-text-faint) / <alpha-value>)'
         }
       },
       fontFamily: {
@@ -35,11 +37,11 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace']
       },
       boxShadow: {
-        glow: '0 0 40px rgba(6, 182, 212, 0.25)',
-        'glow-sm': '0 0 18px rgba(6, 182, 212, 0.3)'
+        glow: '0 0 40px rgb(var(--color-accent) / 0.25)',
+        'glow-sm': '0 0 18px rgb(var(--color-accent) / 0.3)'
       },
       backgroundImage: {
-        'grid-fade': 'linear-gradient(to bottom, rgba(15,23,42,0), rgba(15,23,42,1))'
+        'grid-fade': 'linear-gradient(to bottom, rgb(var(--color-bg) / 0), rgb(var(--color-bg) / 1))'
       }
     }
   },

@@ -2,12 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fallback CSS variable values (dark mode defaults), used only until
+   the inline theme-init script in index.html and useTheme.js take over.
+   Keeping these in sync with src/data/themeDefaults.js prevents a flash
+   of unstyled content on first paint. */
+:root {
+  --color-bg: 15 23 42;
+  --color-bg-light: 21 34 56;
+  --color-surface: 30 41 59;
+  --color-surface-light: 48 63 87;
+  --color-surface-dark: 20 28 41;
+  --color-text: 241 245 249;
+  --color-text-muted: 148 163 184;
+  --color-text-faint: 111 129 155;
+  --color-accent: 6 182 212;
+  --color-accent-soft: 65 200 220;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-midnight text-ink font-body antialiased;
+    @apply bg-midnight text-ink font-body antialiased transition-colors duration-500;
   }
   h1, h2, h3, h4 {
     @apply font-display;
@@ -19,7 +36,23 @@
     @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-midnight rounded-sm;
   }
   ::selection {
-    background: rgba(6, 182, 212, 0.3);
+    background: rgb(var(--color-accent) / 0.3);
+  }
+
+  /* Native cursor is hidden ONLY when CustomCursor.vue has confirmed it
+     successfully activated (adds .has-custom-cursor to <html>). Tying
+     this to a JS-confirmed class — rather than a standalone CSS media
+     query — avoids the mouse ever disappearing with no replacement if
+     the two checks were to disagree on some device/browser. */
+  .has-custom-cursor body,
+  .has-custom-cursor a,
+  .has-custom-cursor button {
+    cursor: none;
+  }
+  .has-custom-cursor input,
+  .has-custom-cursor textarea,
+  .has-custom-cursor select {
+    cursor: auto;
   }
 }
 
