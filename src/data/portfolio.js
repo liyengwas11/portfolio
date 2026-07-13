@@ -11,18 +11,18 @@
  */
 
 export const profile = {
-  name: 'Liyengwas',
-  role: 'Senior Full-Stack Developer & Founder',
+  name: 'Liyengwa Solomon Mugwanga',
+  role: 'Senior Full-Stack Developer',
   location: 'Nairobi, Kenya',
   tagline: 'Building payment-grade platforms for the East African market.',
   summary:
-    'Senior full-stack developer and founder specializing in Laravel, Vue.js, Inertia.js, Flutter, and MySQL. I design and ship production platforms end-to-end — from M-Pesa Daraja and multi-channel African payment integrations to mobile apps and admin dashboards — for clients and my own ventures across Kenya.',
-  availability: 'Available for select freelance & consulting engagements',
-  email: 'hello@example.com', // EDIT ME
+    'I’m a senior full-stack developer and founder who loves building things from scratch and seeing them through to production,for clients and my own ventures.',
+  availability: 'Available for select freelance work and consulting engagements.',
+  email: 'liyengwas@gmail.com', // EDIT ME
   socials: {
-    github: 'https://github.com/yourhandle', // EDIT ME
-    linkedin: 'https://linkedin.com/in/yourhandle', // EDIT ME
-    twitter: 'https://x.com/yourhandle' // EDIT ME
+    github: 'https://github.com/liyengwas11', // EDIT ME
+    linkedin: 'https://linkedin.com/in/liyengwas', // EDIT ME
+    // twitter: 'https://x.com/yourhandle' // EDIT ME
   },
   resumeUrl: '#', // EDIT ME — link to a hosted PDF resume
   // Formspree endpoint that forwards form submissions to your inbox.
@@ -39,8 +39,8 @@ export const profile = {
  */
 export const stats = [
   { value: 7, suffix: '+', label: 'Years of Experience' },
-  { value: 15, suffix: '+', label: 'Projects Delivered' }, // EDIT ME — set your real count
-  { value: 4, suffix: '', label: 'Payment Gateways Integrated' } // M-Pesa, Airtel Money, T-Kash, Card/Bank EFT
+  { value: 10, suffix: '+', label: 'Projects Delivered' }, // EDIT ME — set your real count
+  { value: 5, suffix: '+', label: 'Payment Gateways Integrated' } // M-Pesa, Airtel Money, T-Kash, Card/Bank EFT
 ]
 
 /**
@@ -50,9 +50,9 @@ export const stats = [
  */
 export const about = {
   paragraphs: [
-    "This is placeholder text — replace it with your own story. Something like: I got into web development because I wanted to build things people would actually use, not just toy projects. Over the years that turned into a focus on full-stack platforms that handle real money and real users, which is why payments and reliability matter so much to how I work.",
-    "Another placeholder paragraph — talk about how you work, what kind of projects you enjoy, or what sets your approach apart. Keep it conversational; this is the one section on the site where a bit of personality goes a long way.",
-    "A closing placeholder line — maybe mention what you're currently exploring, learning, or building outside of client work."
+    "Hi, I’m a senior full-stack developer and founder based in Kenya. I don't just write code. I love the entire journey of bringing a product to life.",
+    " My daily toolkit centers around Laravel, Vue.js, Inertia.js, API's, and MySQL. A lot of my work focuses on building robust solutions for the African tech ecosystem.",
+    "This means I've spent plenty of time mastering multi-channel payment integrations like M-Pesa Daraja, designing intuitive admin dashboards, and launching mobile apps. From client projects to my own startup, I'm all about creating smooth, production ready platforms that make an impact."
   ],
   highlights: [
     'End-to-end ownership, from database schema to deployed UI',
@@ -64,7 +64,6 @@ export const about = {
 export const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#timeline' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' }
@@ -73,27 +72,60 @@ export const navLinks = [
 /**
  * Skills grouped into categories. Each category renders as its own
  * card in the Skills Matrix grid (see components/Skills.vue).
+ *
+ * `level` (0–100) drives the animated proficiency bar per skill.
+ * These are estimated starting points based on your stated stack —
+ * adjust freely to match your own honest self-assessment.
  */
 export const skillCategories = [
   {
     title: 'Languages & Frameworks',
     icon: 'code',
-    skills: ['PHP', 'Laravel', 'Vue.js 3', 'Inertia.js', 'Flutter', 'Dart', 'JavaScript (ES6+)', 'TypeScript', 'Tailwind CSS']
+    skills: [
+      { name: 'PHP', level: 92 },
+      { name: 'Laravel', level: 95 },
+      { name: 'Vue.js 3', level: 90 },
+      { name: 'Inertia.js', level: 85 },
+      { name: 'Bootstrap', level: 95 },
+      { name: 'Tailwind CSS', level: 90 },
+      { name: 'JavaScript (ES6+)', level: 88 },
+      { name: 'TypeScript', level: 70 },
+    ]
   },
   {
     title: 'DevOps & Cloud',
     icon: 'cloud',
-    skills: ['Linux / XAMPP', 'CI/CD Pipelines', 'Nginx', 'Git & GitHub', 'DigitalOcean', 'Docker (basics)']
+    skills: [
+      { name: 'Linux / XAMPP', level: 82 },
+      { name: 'CI/CD Pipelines', level: 65 },
+      { name: 'Nginx', level: 70 },
+      { name: 'Git & GitHub', level: 92 },
+      { name: 'DigitalOcean', level: 75 },
+      { name: 'Docker', level: 55 }
+    ]
   },
   {
     title: 'Database & Schema Design',
     icon: 'database',
-    skills: ['MySQL', 'Eloquent ORM', 'Query Optimization', 'Polymorphic Relations', 'UUID Architecture']
+    skills: [
+      { name: 'MySQL', level: 93 },
+      { name: 'Eloquent ORM', level: 92 },
+      { name: 'Query Optimization', level: 80 },
+      { name: 'Polymorphic Relations', level: 78 },
+      { name: 'UUID Architecture', level: 75 }
+    ]
   },
   {
     title: 'Enterprise & Payment Integrations',
     icon: 'link',
-    skills: ['M-Pesa Daraja API', 'STK Push', 'Airtel Money', 'T-Kash', 'USSD Gateways', 'Card & Bank EFT', 'REST API Design', 'OAuth / Laravel Passport']
+    skills: [
+      { name: 'M-Pesa Daraja API', level: 95 },
+      { name: 'STK Push', level: 93 },
+      { name: 'Airtel Money', level: 80 },
+      { name: 'Card & Bank EFT', level: 72 },
+      { name: 'REST API Design', level: 90 },
+      { name: 'OAuth / Laravel Passport', level: 82 }
+    ]
   }
 ]
 

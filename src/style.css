@@ -70,6 +70,31 @@
     @apply bg-steel border border-white/5 rounded-2xl;
   }
 
+  /* Cursor-follow glow — pairs with the v-spotlight directive, which
+     writes --spot-x/--spot-y as the mouse moves over the element.
+     isolate + negative z-index keeps the glow behind the card's own
+     content but above its flat background color. */
+  .spotlight-card {
+    @apply relative isolate overflow-hidden;
+  }
+  .spotlight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(
+      420px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+      rgb(var(--color-accent) / 0.14),
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .spotlight-card:hover::before {
+    opacity: 1;
+  }
+
   .btn-primary {
     @apply inline-flex items-center gap-2 bg-accent text-midnight font-semibold px-6 py-3 rounded-lg
            transition-all duration-300 hover:shadow-glow-sm hover:-translate-y-0.5;

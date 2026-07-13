@@ -64,17 +64,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <section
-    id="hero"
-    class="relative min-h-screen flex items-center pt-28 pb-20 px-6 sm:px-8"
-  >
+  <section id="hero" class="relative min-h-screen flex items-center pt-28 pb-20 px-6 sm:px-8">
     <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center w-full">
       <!-- ─── Text column ─── -->
       <div>
-        <div
-          ref="badgeRef"
-          class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-accent/25 bg-accent/10"
-        >
+        <div ref="badgeRef"
+          class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-accent/25 bg-accent/10">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
             <span class="relative inline-flex rounded-full h-2 w-2 bg-accent" />
@@ -86,7 +81,8 @@ onMounted(() => {
 
         <h1 ref="headlineRef" class="section-heading text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-6">
           <span class="block overflow-hidden"><span class="line-1 block">{{ profile.role }}</span></span>
-          <span class="block overflow-hidden"><span class="line-2 block text-accent">Laravel · Vue · Flutter</span></span>
+          <span class="block overflow-hidden"><span class="line-2 block text-accent">Frontend · Backend ·
+              API's</span></span>
         </h1>
 
         <p ref="subtextRef" class="text-lg text-ink-muted max-w-xl mb-10 leading-relaxed">
@@ -103,37 +99,16 @@ onMounted(() => {
           <a href="#contact" class="btn-ghost" v-magnetic>Get in Touch</a>
         </div>
       </div>
-
-      <!-- ─── Portrait column ───
-           Structure: outer glow wrapper -> rounded frame -> image slot.
-           Swap the placeholder <div> below for a real <img> tag:
-             <img src="/my-photo.jpg" alt="Liyengwas portrait"
-                  class="w-full h-full object-cover" />
-           The aspect-square + rounded-[2rem] on the frame keep the
-           layout ratio stable regardless of what's inside it. -->
       <div ref="portraitRef" class="relative mx-auto w-full max-w-sm">
         <!-- Abstract glow wrapper -->
         <div
           class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-accent/30 via-accent/5 to-transparent blur-2xl"
-          aria-hidden="true"
-        />
+          aria-hidden="true" />
         <!-- Modern rounded frame -->
         <div class="relative aspect-square rounded-[2rem] border border-accent/20 bg-steel overflow-hidden shadow-glow">
-          <!--
-            STRUCTURAL PLACEHOLDER — replace this whole <div> with:
-            <img src="/my-photo.jpg" alt="Portrait of Liyengwas" class="w-full h-full object-cover" />
-          -->
-          <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-steel-light to-steel-dark">
-            <svg viewBox="0 0 200 200" class="w-2/3 h-2/3 text-accent/40" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="100" cy="72" r="34" />
-              <path d="M40 176c8-38 40-58 60-58s52 20 60 58" stroke-linecap="round" />
-              <rect x="8" y="8" width="184" height="184" rx="24" stroke-dasharray="4 6" opacity="0.5" />
-            </svg>
-          </div>
-          <!-- Corner tag reinforcing the "swap me" affordance during dev -->
-          <span class="absolute bottom-3 right-3 text-[10px] font-mono text-ink-faint bg-midnight/80 px-2 py-1 rounded">
-            replace with my-photo.jpg
-          </span>
+
+          <img src="/public/images/liyengwas.png" alt="Portrait of Liyengwas" class="w-full h-full object-cover" />
+
         </div>
       </div>
     </div>
