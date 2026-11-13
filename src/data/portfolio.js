@@ -18,18 +18,18 @@ export const profile = {
   summary:
     'I’m a senior full-stack developer and founder who loves building things from scratch and seeing them through to production,for clients and my own ventures.',
   availability: 'Available for select freelance work and consulting engagements.',
-  email: 'liyengwas@gmail.com', // EDIT ME
+  email: 'liyengwas@gmail.com',
   socials: {
-    github: 'https://github.com/liyengwas11', // EDIT ME
-    linkedin: 'https://linkedin.com/in/liyengwas', // EDIT ME
-    // twitter: 'https://x.com/yourhandle' // EDIT ME
+    github: 'https://github.com/liyengwas11',
+    linkedin: 'https://linkedin.com/in/liyengwas',
+    // twitter: 'https://x.com/yourhandle'
   },
-  resumeUrl: '#', // EDIT ME — link to a hosted PDF resume
+  resumeUrl: '#', // link to a hosted PDF resume
   // Formspree endpoint that forwards form submissions to your inbox.
   // Sign up free at https://formspree.io, create a form pointed at
   // whatever email you want submissions sent to, and paste the
   // generated endpoint URL here. See Contact.vue for how it's used.
-  formEndpoint: 'https://formspree.io/f/YOUR_FORM_ID' // EDIT ME
+  formEndpoint: 'https://formspree.io/f/YOUR_FORM_ID'
 }
 
 /**
@@ -39,7 +39,7 @@ export const profile = {
  */
 export const stats = [
   { value: 7, suffix: '+', label: 'Years of Experience' },
-  { value: 10, suffix: '+', label: 'Projects Delivered' }, // EDIT ME — set your real count
+  { value: 10, suffix: '+', label: 'Projects Delivered' }, // set your real count
   { value: 5, suffix: '+', label: 'Payment Gateways Integrated' } // M-Pesa, Airtel Money, T-Kash, Card/Bank EFT
 ]
 
@@ -182,12 +182,24 @@ export const projects = [
     name: 'Glowandhome',
     icon: 'home',
     description:
-      'A women-led home services marketplace connecting verified technicians with clients. Features M-Pesa escrow payments, police-vetted onboarding, and a Flutter mobile experience backed by a Laravel API.',
+      'An e-commerce platform selling lighting and household fixtures to customers in Kenya and around the world.',
     stack: ['Vue.js', 'Laravel', 'MySQL', 'Inertia.js', 'M-Pesa Daraja'],
-    images: ['/public/projects/glowhome/one.png', '/public/projects/glowhome/two.png', '/public/projects/glowhome/three.png'], // EDIT ME — e.g. '/projects/shefixes-1.jpg'
+    images: ['/public/projects/glowhome/one.png', '/public/projects/glowhome/two.png', '/public/projects/glowhome/three.png'],
     links: {
-      live: 'http://glowandhome.com/', // EDIT ME
-      repo: '#' // EDIT ME
+      live: 'http://glowandhome.com/',
+      repo: '#'
+    }
+  },
+  {
+    name: 'GatePass',
+    icon: 'home',
+    description:
+      'A custom-built platform used to track employee attendance at a bakery in the Kenyan market,integrated alongside a custom pos and delivery solution.',
+    stack: ['Vue.js', 'Laravel', 'MySQL',],
+    images: ['/public/projects/gatepass/one.png', '/public/projects/gatepass/two.png', '/public/projects/gatepass/three.png'],
+    links: {
+      live: 'https://hr.kayinfresh.com/login', 
+      repo: '#'
     }
   },
   {
@@ -196,133 +208,144 @@ export const projects = [
     description:
       'A fashion e-commerce storefront for the Kenyan market covering swimwear, resortwear, sleepwear, and accessories, with SEO-optimized taxonomy and a streamlined WooCommerce build.',
     stack: ['WooCommerce', 'WordPress', 'Rank Math', 'Php'],
-    images: ['/public/projects/majichic/one.png', '/public/projects/majichic/two.png', '/public/projects/majichic/three.png'], // EDIT ME — e.g. '/projects/shefixes-1.jpg'
+    images: ['/public/projects/majichic/one.png', '/public/projects/majichic/two.png', '/public/projects/majichic/three.png'],
     links: {
-      live: '#', // EDIT ME
-      repo: '#' // EDIT ME
+      live: 'https://demo.majichic.com',
+      repo: '#'
+    }
+  },
+  {
+    name: 'Berry Shed',
+    icon: 'leaf',
+    description:
+      'An agriculture-focused platform connecting farmers with buyers and resources, part of an early full-stack product portfolio.', 
+    stack: ['Vue.js', 'Nuxt.js', 'GSAP'],
+    images: ['/public/projects/berryshed/one.png', '/public/projects/berryshed/two.png', '/public/projects/berryshed/three.png'],
+    links: {
+      live: 'https://berry-shed.vercel.app/',
+      repo: '#'
     }
   },
   {
     name: 'Tonny Green Solutions',
     icon: 'card',
     description:
-      'A unified Laravel payment gateway abstracting M-Pesa, Airtel Money, T-Kash, USSD, cards, and bank EFT behind a shared driver contract, with integer-cent storage and UUID-based ledgering.',
+      'Add a short description of this project.', // EDIT ME — the description line was empty, which breaks the file
     stack: ['WooCommerce', 'WordPress', 'Rank Math', 'Php'],
-    images: ['/public/projects/tonnygreen/one.png', '/public/projects/tonnygreen/two.png', '/public/projects/tonnygreen/three.png'], // EDIT ME — e.g. '/projects/shefixes-1.jpg'
+    images: ['/public/projects/tonnygreen/one.png', '/public/projects/tonnygreen/two.png', '/public/projects/tonnygreen/three.png'],
     links: {
-      live: '#', // EDIT ME
-      repo: '#' // EDIT ME
-    }
-  },
-  // {
-  //   name: 'STMS',
-  //   icon: 'grid',
-  //   description:
-  //     'A structured service/technician management system built to coordinate scheduling, verification, and workflow tracking across distributed field teams.', // EDIT ME — refine description
-  //   stack: ['Laravel', 'Vue.js', 'Inertia.js', 'MySQL'],
-  //   images: ['', '', ''], // EDIT ME — e.g. '/projects/shefixes-1.jpg'
-  //   links: {
-  //     live: '#', // EDIT ME
-  //     repo: '#' // EDIT ME
-  //   }
-  // },
-  {
-    name: 'Berry Shed',
-    icon: 'leaf',
-    description:
-      'An agriculture-focused platform connecting farmers with buyers and resources, part of an early full-stack product portfolio.', // EDIT ME — refine description
-    stack: ['Vue.js', 'Nuxt.js', 'GSAP'],
-    images: ['/public/projects/berryshed/one.png', '/public/projects/berryshed/two.png', '/public/projects/berryshed/three.png'], // EDIT ME — e.g. '/projects/shefixes-1.jpg'
-    links: {
-      live: 'https://berry-shed.vercel.app/',
-      repo: '#' // EDIT ME
+      live: '#',
+      repo: '#'
     }
   },
   {
     name: 'Zazu Deliveries',
     icon: 'truck',
     description:
-      'A delivery logistics platform focused on real-time dispatch and tracking, built for reliability across the East African last-mile delivery context.', // EDIT ME — refine description
+      'A delivery logistics platform focused on real-time dispatch and tracking, built for reliability across the East African last-mile delivery context.',
     stack: ['Laravel', 'Vue.js', 'MySQL'],
     images: ['/public/projects/zazu/deliveries.png',],
     links: {
-      live: '#', // EDIT ME
-      repo: '#' // EDIT ME
+      live: '#',
+      repo: '#'
     }
   },
   {
     name: 'Zazu Fieldsales',
     icon: 'truck',
     description:
-      'A delivery logistics platform focused on real-time dispatch and tracking, built for reliability across the East African last-mile delivery context.', // EDIT ME — refine description
+      'Tracks salespeople in the field and maps out client store locations. Action points recorded on the ground are captured as to-do items, so managers can see exactly what each rep has committed to.',
     stack: ['Laravel', 'Vue.js', 'MySQL'],
     images: ['/public/projects/zazu/fieldsales.png'],
     links: {
-      live: '#', // EDIT ME
-      repo: '#' // EDIT ME
+      live: '#',
+      repo: '#'
     }
   },
   {
     name: 'Zazu Wholesale',
     icon: 'truck',
     description:
-      'A delivery logistics platform focused on real-time dispatch and tracking, built for reliability across the East African last-mile delivery context.', // EDIT ME — refine description
+      'A delivery logistics platform focused on real-time dispatch and tracking, built for reliability across the East African last-mile delivery context.',
     stack: ['Laravel', 'Vue.js', 'MySQL'],
     images: ['/public/projects/zazu/wholesale.png'],
     links: {
-      live: '#', // EDIT ME
-      repo: '#' // EDIT ME
+      live: '#',
+      repo: '#'
     }
   },
   {
     name: 'Zazu Hub',
     icon: 'truck',
     description:
-      'A data hub platform focused on real-time dispatch and tracking, built for reliability across the East African last-mile delivery context.', // EDIT ME — refine description
+      'The central app of the Zazu suite. It handles authentication and bridges the other Zazu applications, sharing the necessary data between them so every module works from one source of truth.',
     stack: ['Laravel', 'Vue.js', 'MySQL'],
     images: ['/public/projects/zazu/hub.png'],
     links: {
-      live: '#', // EDIT ME
-      repo: '#' // EDIT ME
+      live: '#',
+      repo: '#'
     }
   },
-  // {
-  //   name: 'Zazu Construction',
-  //   icon: 'truck',
-  //   description:
-  //     'A delivery logistics platform focused on real-time dispatch and tracking, built for reliability across the East African last-mile delivery context.', // EDIT ME — refine description
-  //   stack: ['Laravel', 'Vue.js', 'MySQL'],
-  //   images: ['', '', ''], // EDIT ME — e.g. '/projects/shefixes-1.jpg'
-
-  //   links: {
-  //     live: '#', // EDIT ME
-  //     repo: '#' // EDIT ME
-  //   }
-  // },
-  // {
-  //   name: 'Zazu Artisans',
-  //   icon: 'truck',
-  //   description:
-  //     'A delivery logistics platform focused on real-time dispatch and tracking, built for reliability across the East African last-mile delivery context.', // EDIT ME — refine description
-  //   stack: ['Laravel', 'Vue.js', 'MySQL'],
-  //   images: ['', '', ''], // EDIT ME — e.g. '/projects/shefixes-1.jpg'
-  //   links: {
-  //     live: '#', // EDIT ME
-  //     repo: '#' // EDIT ME
-  //   }
-  // },
-  // {
-  //   name: 'Zazu WHMS',
-  //   icon: 'truck',
-  //   description:
-  //     'A delivery logistics platform focused on real-time dispatch and tracking, built for reliability across the East African last-mile delivery context.', // EDIT ME — refine description
-  //   stack: ['Laravel', 'Vue.js', 'MySQL'],
-  //   images: ['', '', ''], // EDIT ME — e.g. '/projects/shefixes-1.jpg'
-  //   links: {
-  //     live: '#', // EDIT ME
-  //     repo: '#' // EDIT ME
-  //   }
-  // },
+  {
+    name: 'Zazu Construction',
+    icon: 'truck',
+    description:
+      'Gives every level of management visibility into material utilization and chain of custody, from issue to on-site use, so nothing goes unaccounted for.',
+    stack: ['Laravel', 'Vue.js', 'MySQL'],
+    images: ['', '', ''], 
+    links: {
+      live: '#',
+      repo: '#'
+    }
+  },
+  {
+    name: 'Zazu Artisans',
+    icon: 'truck',
+    description:
+      "Tracks tasks assigned to artisans once goods are delivered and need to be assembled, set up, or configured. Managers can follow an artisan's location relative to the client's premises and see the level of effort at a glance.",
+    stack: ['Laravel', 'Vue.js', 'MySQL'],
+    images: ['', '', ''], 
+    links: {
+      live: '#',
+      repo: '#'
+    }
+  },
+  {
+    name: 'Zazu WHMS',
+    icon: 'truck',
+    description:
+      'A custom-built warehouse management system designed around the needs of the manufacturing sector in the Kenyan market.',
+    stack: ['Laravel', 'Vue.js', 'MySQL'],
+    images: ['', '', ''],
+    links: {
+      live: '#',
+      repo: '#'
+    }
+  },
+  {
+    name: 'STMS (Student Transport Management System)',
+    icon: 'grid',
+    description:
+      'Coordinates scheduling, verification, and workflow tracking for student trips booked from a parent-selected pickup point or drop-off location. Parents can track the vehicle carrying their child live while a trip is in progress.',
+    stack: ['Laravel', 'Vue.js', 'Inertia.js', 'MySQL'],
+    images: ['', '', ''], 
+    links: {
+      live: '#',
+      repo: '#'
+    }
+  },
+  {
+    name: 'Mkulima Mfalme',
+    icon: 'leaf',
+    description:
+      'An agriculture-focused platform connecting farmers with buyers and resources, part of an early full-stack product portfolio.',
+    stack: ['Laravel', 'Vue.js', 'MySQL'], 
+    images: ['', '', ''],
+    links: {
+      live: '#',
+      repo: '#'
+    }
+  }
 ]
 
 export const philosophy =
